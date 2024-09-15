@@ -1,0 +1,29 @@
+{% extends 'MainApp/main.html' %}
+{% block main %}
+
+        <div style="margin-bottom: 30px;">
+            <h2 style="text-align: left;">Welcome..!{{request.user.username}} &nbsp; &nbsp;<a href="{% url 'logouturl'%}">Logout</a></h2>
+        </div>
+            {% for prd in Product %}
+            <div id="one" style="float:left;">
+                <a href="{% url 'detailurl' prd.pid%}"><img src="{{prd.pimage.url}}" alt="" height="280px" width="240px"></a>
+                <p>{{prd.pname}}</p>
+                <p>{{prd.price}}</p>
+            </div>
+            {% endfor %}
+        <div style="position: relative; top: 300px; left: 20px;">
+           
+         <p>      
+            {% if Product.has_previous %}
+                <a href="{% url 'homeurl' Product.previous_page_number  %}">Previous</a>
+            {% endif %} 
+            <h3>{{Product.number}}</h3>
+            {% if Product.has_next%}
+                <a href="{% url 'homeurl' Product.next_page_number%}">Next</a>
+            {% endif %}
+        </p>
+        </div>
+
+{% endblock %}
+
+

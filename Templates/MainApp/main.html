@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{%static 'css/main.css' %}">
+    </head>
+    <body>
+        <div id="heading">
+            <h1>Main Application</h1>
+        </div>
+        <div id="main">
+            <div id="box">
+                {% block main %}
+                <form action="{% url 'mainurl' %}" method="post">
+                    {% csrf_token %}
+                    Enter text <input type="text" name="t1"><br><br>
+                    <input type="submit" value="Calculate">
+                </form>
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

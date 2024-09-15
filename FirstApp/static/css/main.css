@@ -1,0 +1,26 @@
+
+#posi{
+    position:relative;
+    left:500px;
+    top:50px;
+    width:150px;
+    height:350px;
+    background-color:aqua;
+    text-align:center;
+
+}
+#txt{
+    position: relative;
+    top:50px;
+    width:200px;
+    height:90px;
+    left:280px;
+    background-color:aliceblue;
+}
+body{
+    background-color:bisque;
+}
+h1{
+    text-align:center;
+    color:red;
+}

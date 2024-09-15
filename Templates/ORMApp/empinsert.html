@@ -1,0 +1,18 @@
+{% extends 'MainApp/main.html'%}
+
+{% block main %}
+
+<form action="{% url 'ormurl' %}" method="post">
+    {% csrf_token %}
+    Enter Employee number <input type="text" name="eno"><br><br>
+    Employee Name <input type="text" name="ename"><br><br>
+    Salary <input type="text" name="esal"><br><br>
+    Department no<input type="text" name="dno"><br><br>
+    <input type="submit" value="save">
+</form>
+
+
+{% for msg in messages %}
+<h1>{{msg}}</h1>
+{% endfor %}
+{% endblock %}

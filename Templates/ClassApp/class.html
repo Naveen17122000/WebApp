@@ -1,0 +1,10 @@
+{% extends 'MainApp/main.html' %}
+
+{% block main %}
+<form action="{% url 'secondurl' %}" method="post">
+    {% csrf_token %}
+    Enter info <input type="text" name="t1"><br><br>
+    <input type="submit" value="submit">
+</form>
+<h1>{{data}}</h1>
+{% endblock %}

@@ -1,0 +1,16 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+#heading{
+    height:40px;
+    background-color:blue;
+}
+#heading h1{
+    text-align:center;
+    color:white;
+}
+#main{
+    height:500px;
+    background-color:violet;
+}

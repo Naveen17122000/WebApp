@@ -1,0 +1,8 @@
+{% extends 'MainApp/main.html' %}
+{% block main %}
+<form action="{% url 'signupurl' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+<input type="submit" value="Create User">
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'MainApp/main.html' %}
+{% block main %}
+<a href="{%url 'ormurl'%}">Add Employee</a>
+<table border="1px" cellpadding="0px" cellspecing="2px" >
+    <tr><th>Employee No</th><th>Employee Name</th><th>Salary</th><th>Action</th><td>Development</td></tr>
+    {% for emp in employees%}
+    <tr><td>{{emp.empno}}</td><td>{{emp.empname}}</td><td>{{emp.salary}}</td><td><a href="{%url 'deleteempurl' emp.empno %}">delete</a><td>{{emp.deportment.dptname}}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

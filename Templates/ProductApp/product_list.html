@@ -1,0 +1,10 @@
+{%extends 'MainApp/main.html'%}
+{% block main %}
+{% for prd in object_list%}
+<div>
+<img src="{prd_pimage.urls}" alt="" width="100px" height="80px">
+<h1>{{prd.pname}}</h1>
+<h1>{{prd.price}}</h1>
+</div>
+{% endfor %}
+{% endblock %}

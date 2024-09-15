@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    </head>
+    <body>
+        <div id="heading">
+            <h1>Inheritence Application</h1>
+        </div>
+        <div id="main">
+            {% block content %}
+            <h1>Main page</h1>
+            {% endblock %}
+        </div>
+    </body>
+</html>

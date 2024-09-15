@@ -1,0 +1,13 @@
+{% extends 'MainApp/main.html'%}
+{% block main %}
+<form action="{% url 'loginurl' %}" method="post">
+    {% csrf_token %}
+    UserName <input type="text" name="uname" id=""><br><br>
+    Password <input type="text" name="pwd" id=""><br><br>
+    <input type="submit" name="login">
+    <a href="{% url 'signupurl' %}">Signup</a>
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+{% endblock %}

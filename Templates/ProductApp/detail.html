@@ -1,0 +1,11 @@
+{% extends 'MainApp/main.html' %}
+{% block main %}
+
+<img src="{{product.pimage.url}}" height="300px" width="250px" ><br><br>
+<a href="{% url 'homeurl'%}">Home</a>
+<hr>
+<h2>Previous Products</h2>
+{% for prd in prevPrevs %}
+<img src="{{prd.pimage.url}}" alt="" height="90px" width="90px">
+{% endfor %}
+{% endblock %}

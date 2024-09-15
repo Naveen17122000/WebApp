@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #main{
+            position: relative;
+            top:100px;
+            left:300px;
+            height:140px;
+            width:200px;
+            background-color:blanchedalmond;
+        }
+        #btn input{
+            width:40px;
+        }
+    </style>
+    </head>
+    <body>
+        <form action="" method="post">
+            {% csrf_token %}
+        <div id="main">
+        Input 1<input type="text" name="t1"><br><br>
+        Input 2<input type="text" name="t2"><br><br>
+        <div id="btn">
+            <input type="submit" value="Add" name="add">
+            <input type="submit" value="Subs" name="subs">
+            <input type="submit" value="Multi" name="multi">
+            <input type="submit" value="Div" name="div">
+            <br><br>
+        </div>
+       
+    </form>
+        {% if action == 'Addition' %}
+        <h1 style="color:orange ">{{action}} = {{output}}</h1>
+        {% else %}
+        <h1>{{action}} = {{output}}</h1>
+        {% endif %}
+    </div>
+    </body>
+</html>

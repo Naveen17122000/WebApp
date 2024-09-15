@@ -1,0 +1,13 @@
+{% extends 'MainApp/main.html'%}
+{% block main %}
+<form action="" method="post">
+    {% csrf_token %}
+<h4>empno   empname    salary</h4>
+{{object.empno}} &nbsp; {{object.empname}} &nbsp; {{object.salary}}
+<h4>Do you want to delete ?</h4>
+<hr>
+<input type="submit" value="YES">
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <form action="{% url 'formurl' %}" method="post">
+            {%csrf_token%}
+            
+            {{form.as_p}}
+
+            <input type="submit" value="submit">
+        </form>
+        {%for msg in messages%}
+            <h1>{{msg}}</h1>
+            {% endfor %}
+        <h1>{{name}}-{{salary}}</h1>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+{%extends 'MainApp/main.html'%}
+{% block main %}
+{% for prd in object_list%}
+<div>
+    <h2>{{prd.empno}}</h2>
+    <h2>{{prd.empname}}</h2>
+    <h2>{{prd.salary}}</h2>
+</div>
+{% endfor %}
+{% endblock %}
